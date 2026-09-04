@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AgriHydra Solutions | Smart Polyhouses & Precision Irrigation</title>
+<meta name="description" content="AgriHydra Solutions delivers end-to-end polyhouse EPC, drip irrigation, IoT monitoring, subsidy facilitation and market linkage for Indian farmers." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div class="govt-scheme-bar">
+  <p>GOVERNMENT SUBSIDY SCHEMES AVAILABLE — GET UP TO 60% SUBSIDY UNDER CENTRAL & STATE HORTICULTURE MISSIONS FOR POLYHOUSE & DRIP IRRIGATION PROJECTS</p>
+</div>
+
+<div id="progress-bar"></div>
+
+<!-- ================= NAV ================= -->
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" onclick="goPage('home')">
+      <img class="mark" src="image/logo.jpeg" alt="AgriHydra Solutions logo" style="border-radius:12px;object-fit:contain;background:#fff;padding:2px;"></a>
+    <div class="nav-links" id="nav-links">
+      <a class="nav-link" data-page="home" onclick="goPage('home')">Home</a>
+      <div class="nav-link has-dropdown" data-page="services" id="services-dd-trigger" onclick="toggleServicesDropdown(event)">
+        Services
+        <svg class="caret" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="dropdown-menu" onclick="event.stopPropagation()">
+          <a class="dropdown-item" onclick="goPage('services')">
+            <span class="dd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 21V9"/></svg></span>
+            <span>All Services<small>Full range of AgriHydra offerings</small></span>
+          </a>
+          <a class="dropdown-item" onclick="goPage('polyhouse')">
+            <span class="dd-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/></svg></span>
+            <span>Polyhouse Services<small>Turnkey design, build & automation</small></span>
+          </a>
+        </div>
+      </div>
+      <a class="nav-link" data-page="solutions" onclick="goPage('solutions')">Solutions</a>
+      <a class="nav-link" data-page="roi" onclick="goPage('roi')">ROI Calculator</a>
+      <a class="nav-link" data-page="schemes" onclick="goPage('schemes')">Govt Schemes</a>
+      <a class="nav-link" data-page="contact" onclick="goPage('contact')">Contact</a>
+      <a class="nav-link" data-page="partner" onclick="goPage('partner')">Partner With Us</a>
+    </div>
+    <div class="nav-cta">
+      <button class="lang-toggle notranslate" onclick="toggleLanguage()" aria-label="Switch between English and Hindi" id="lang-toggle-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg>
+        <span><span class="lang-current" id="lang-current">EN</span><span class="lang-sep">/हिं</span></span>
+      </button>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" id="theme-icon">🌙</button>
+      <a class="btn btn-primary btn-sm" style="display:none" id="nav-book-btn" onclick="openConsultationModal()">Book Consultation</a>
+      <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu-backdrop" onclick="closeMobileMenu()" aria-hidden="true"></div>
+  <div id="mobile-menu" aria-label="Mobile navigation">
+    <div class="mobile-menu-header"><span>AgriHydra</span><button type="button" class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Close navigation menu">×</button></div>
+    <a onclick="goPage('home')">Home</a>
+    <a onclick="goPage('services')">Services</a>
+    <div class="mm-sub">
+      <a onclick="goPage('polyhouse')">🏗️ Polyhouse Services</a>
+    </div>
+    <a onclick="goPage('solutions')">Solutions</a>
+    <a onclick="goPage('roi')">ROI Calculator</a>
+    <a onclick="goPage('schemes')">Govt Schemes</a>
+    <a onclick="goPage('contact')">Contact</a>
+    <a onclick="goPage('partner')">Partner With Us</a>
+    <button class="mm-lang notranslate" onclick="toggleLanguage()" aria-label="Switch between English and Hindi">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg>
+      <span id="lang-current-mobile">EN</span><span style="font-weight:400;color:var(--ink-muted)">/हिं — Switch language</span>
+    </button>
+    <a class="btn btn-primary btn-sm mt-16" onclick="openConsultationModal()">Book Consultation</a>
+  </div>
+</nav>
+
+<!-- ================= GOOGLE TRANSLATE (EN / HI) ================= -->
+<div id="google_translate_element"></div>
+
+
+
+<!-- ================= PAGE: HOME ================= -->
+<main id="page-home" class="page active">
+
+  <section class="hero">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="reveal in">
+          <span class="eyebrow" style="background:rgba(255,255,255,.12);color:#fff;">India's Integrated Polyhouse & Irrigation Partner</span>
+          <h1>Transforming Indian Agriculture with <span class="hl">Smart Polyhouses</span> & Precision Irrigation</h1>
+          <p class="sub">Helping farmers increase yield up to 10x while saving 40% water through integrated protected cultivation — from subsidy paperwork to harvest and market linkage.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-gold" onclick="goPage('contact')">Get Started</a>
+            <a class="btn btn-ghost-light" onclick="openConsultationModal()">Book Consultation</a>
+          </div>
+          <div class="hero-stats">
+            <div><b>3–10x</b><span>Higher Yield</span></div>
+            <div><b>40%</b><span>Water Saved</span></div>
+            <div><b>60%</b><span>Govt. Subsidy</span></div>
+          </div>
+        </div>
+        <div class="hero-art reveal in">
+          <svg class="polyhouse-illustration" viewBox="0 0 520 420" fill="none">
+            <ellipse cx="260" cy="390" rx="230" ry="20" fill="black" opacity=".18"/>
+            <path d="M40 300 L40 180 Q260 60 480 180 L480 300 Z" fill="#e6eff8" opacity=".92"/>
+            <path d="M40 300 L40 180 Q260 60 480 180 L480 300" stroke="#0b4c8c" stroke-width="4"/>
+            <g stroke="#0b4c8c" stroke-width="2" opacity=".5">
+              <path d="M100 300 L100 205 Q260 110 420 205 L420 300"/>
+              <path d="M40 240 L480 240"/>
+              <path d="M40 270 L480 270"/>
+            </g>
+            <rect x="220" y="230" width="80" height="70" fill="#072f57"/>
+            <rect x="248" y="250" width="24" height="50" fill="#041b34"/>
+            <g>
+              <circle cx="130" cy="330" r="16" fill="#f5820f"/>
+              <circle cx="170" cy="335" r="16" fill="#0b4c8c"/>
+              <circle cx="210" cy="330" r="16" fill="#f5820f"/>
+              <circle cx="310" cy="330" r="16" fill="#0b4c8c"/>
+              <circle cx="350" cy="335" r="16" fill="#f5820f"/>
+              <circle cx="390" cy="330" r="16" fill="#0b4c8c"/>
+            </g>
+            <line x1="60" y1="345" x2="460" y2="345" stroke="#041b34" stroke-width="3" stroke-dasharray="6 8"/>
+            <circle cx="120" cy="345" r="4" fill="#38bdf8"><animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/></circle>
+            <circle cx="260" cy="345" r="4" fill="#38bdf8"><animate attributeName="opacity" values="0;1;0" dur="2s" begin=".6s" repeatCount="indefinite"/></circle>
+            <circle cx="400" cy="345" r="4" fill="#38bdf8"><animate attributeName="opacity" values="0;1;0" dur="2s" begin="1.2s" repeatCount="indefinite"/></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="drip-divider"><div class="line"></div><div class="drop"></div><div class="line"></div></div>
+
+  <!-- PROBLEMS -->
+  <section class="section">
+    <div class="container">
+      <div class="center" style="max-width:640px;">
+        <span class="eyebrow">The Challenge</span>
+        <h2 class="h2">Problems Indian Farmers Face Today</h2>
+      </div>
+      <div class="grid grid-3 mt-40">
+        <div class="card problem-card feature-card reveal">
+          <div class="feature-icon" style="background-image:url('https://images.unsplash.com/photo-1753542175735-f57082a5ff79?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div>
+          <h4>Water Scarcity</h4><p>Falling groundwater levels and erratic rainfall put yields at risk every season.</p>
+        </div>
+        <div class="card problem-card feature-card reveal">
+          <div class="feature-icon" style="background-image:url('https://images.unsplash.com/photo-1696785042087-7211ac323e9c?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div>
+          <h4>Climate Challenges</h4><p>Heatwaves, unseasonal storms and pest pressure make open-field farming unpredictable.</p>
+        </div>
+        <div class="card problem-card feature-card reveal">
+          <div class="feature-icon" style="background-image:url('https://images.unsplash.com/photo-1565373679107-344d38dbf734?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div>
+          <h4>High Initial Cost</h4><p>Protected cultivation infrastructure feels out of reach without the right financing partner.</p>
+        </div>
+        <div class="card problem-card feature-card reveal">
+          <div class="feature-icon" style="background-image:url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div>
+          <h4>Complex Subsidy Process</h4><p>State & central horticulture subsidy paperwork is confusing and time-consuming.</p>
+        </div>
+        <div class="card problem-card feature-card reveal">
+          <div class="feature-icon" style="background-image:url('https://images.unsplash.com/photo-1757627550652-30788bfce978?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div>
+          <h4>Poor Market Access</h4><p>Middlemen erode margins, leaving little of the harvest's real value with the farmer.</p>
+        </div>
+        <div class="card problem-card feature-card reveal">
+          <div class="feature-icon" style="background-image:url('https://images.unsplash.com/photo-1653280662710-1cac52cde6d7?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div>
+          <h4>Fragmented Support</h4><p>Construction, irrigation, and maintenance from separate vendors with no accountability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="center" style="max-width:640px;">
+        <span class="eyebrow">End-to-End, Under One Roof</span>
+        <h2 class="h2">Our Integrated Solutions</h2>
+        <p class="lede center">Everything a farmer needs to move from open field to protected, water-smart cultivation.</p>
+      </div>
+      <div class="grid grid-4 mt-40">
+        <div class="card solution-card feature-card reveal"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1719760665423-c07ba150397b?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div><h4>Polyhouse Construction</h4><p>Turnkey EPC — design, fabrication, cladding and installation.</p></div>
+        <div class="card solution-card feature-card reveal"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1738598665698-7fd7af4b5e0c?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div><h4>Drip Irrigation</h4><p>Precision drip networks engineered for your crop and soil.</p></div>
+        <div class="card solution-card feature-card reveal"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1562722902-d33533894eea?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div><h4>Fertigation Systems</h4><p>Automated nutrient dosing timed to the crop growth cycle.</p></div>
+        <div class="card solution-card feature-card reveal"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1658753145551-8f44e5811d21?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div><h4>IoT Farm Monitoring</h4><p>Live sensor data on soil moisture, temperature and humidity.</p></div>
+        <div class="card solution-card feature-card reveal"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div><h4>Govt. Subsidy Assistance</h4><p>We handle documentation and liaison for horticulture subsidies.</p></div>
+        <div class="card solution-card feature-card reveal"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1672380135241-c024f7fbfa13?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div><h4>NBFC Financing</h4><p>Structured loan facilitation with partner NBFCs and banks.</p></div>
+        <div class="card solution-card feature-card reveal"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div><h4>Market Linkage</h4><p>Direct buyer connections so more margin stays with you.</p></div>
+        <div class="card solution-card feature-card reveal"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1709614584462-8cf8d4384733?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div><h4>Annual Maintenance</h4><p>Scheduled upkeep to protect your infrastructure investment.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section hiw-section" style="background:var(--gray-50);">
+    <div class="hiw-bg" aria-hidden="true">
+      <div class="hiw-blob b1"></div>
+      <div class="hiw-blob b2"></div>
+      <div class="hiw-blob b3"></div>
+      <svg class="hiw-circuit" viewBox="0 0 1000 600" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="hiwLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0FA968"/>
+            <stop offset="55%" stop-color="#2F7BF5"/>
+            <stop offset="100%" stop-color="#F5A524"/>
+          </linearGradient>
+        </defs>
+        <path d="M40,60 C220,20 300,140 480,90 S760,40 960,120"/>
+        <path d="M20,220 C200,260 320,180 520,240 S800,300 980,220"/>
+        <path d="M60,380 C240,340 340,440 540,390 S780,340 940,400"/>
+        <path d="M30,520 C210,560 330,480 520,530 S770,560 960,500"/>
+        <circle class="hiw-node" cx="480" cy="90" r="3"/>
+        <circle class="hiw-node" cx="520" cy="240" r="3"/>
+        <circle class="hiw-node" cx="540" cy="390" r="3"/>
+        <circle class="hiw-node" cx="520" cy="530" r="3"/>
+        <circle class="hiw-node" cx="200" cy="260" r="3"/>
+        <circle class="hiw-node" cx="760" cy="40" r="3"/>
+        <circle class="hiw-node" cx="800" cy="300" r="3"/>
+        <circle class="hiw-node" cx="240" cy="340" r="3"/>
+      </svg>
+      <div class="hiw-particle" style="left:8%;width:8px;height:8px;background:linear-gradient(135deg,var(--green),var(--blue));animation-duration:9s;animation-delay:0s;"></div>
+      <div class="hiw-particle" style="left:22%;width:6px;height:6px;background:linear-gradient(135deg,var(--blue),var(--gold));animation-duration:11s;animation-delay:2s;"></div>
+      <div class="hiw-particle" style="left:40%;width:7px;height:7px;background:linear-gradient(135deg,var(--green),var(--gold));animation-duration:8s;animation-delay:4s;"></div>
+      <div class="hiw-particle" style="left:58%;width:9px;height:9px;background:linear-gradient(135deg,var(--blue),var(--green));animation-duration:10s;animation-delay:1s;"></div>
+      <div class="hiw-particle" style="left:74%;width:6px;height:6px;background:linear-gradient(135deg,var(--gold),var(--green));animation-duration:12s;animation-delay:5s;"></div>
+      <div class="hiw-particle" style="left:88%;width:8px;height:8px;background:linear-gradient(135deg,var(--green),var(--blue));animation-duration:9.5s;animation-delay:3s;"></div>
+    </div>
+    <div class="container">
+      <div class="grid grid-2" style="align-items:start;gap:60px;">
+        <div>
+          <span class="eyebrow">Our Process</span>
+          <h2 class="h2">How It Works</h2>
+          <p class="lede">A single, accountable pipeline from first call to market linkage — like a drip line, every step feeds the next.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-step reveal"><div class="emitter"><div class="dot"></div></div><div><h4>Consultation</h4><p>We understand your land, crop goals and budget.</p></div></div>
+          <div class="timeline-step reveal"><div class="emitter"><div class="dot"></div></div><div><h4>Farm Survey</h4><p>Soil, water source and topography assessment on-site.</p></div></div>
+          <div class="timeline-step reveal"><div class="emitter"><div class="dot"></div></div><div><h4>Subsidy Assistance</h4><p>We file and track your government subsidy application.</p></div></div>
+          <div class="timeline-step reveal"><div class="emitter"><div class="dot"></div></div><div><h4>Installation</h4><p>Polyhouse, drip and fertigation systems installed by our EPC team.</p></div></div>
+          <div class="timeline-step reveal"><div class="emitter"><div class="dot"></div></div><div><h4>IoT Monitoring</h4><p>Sensors go live; you track your farm from your phone.</p></div></div>
+          <div class="timeline-step reveal"><div class="emitter"><div class="dot"></div></div><div><h4>Harvest</h4><p>Higher, more consistent yields season after season.</p></div></div>
+          <div class="timeline-step reveal"><div class="emitter"><div class="dot"></div></div><div><h4>Market Linkage</h4><p>We connect you directly to buyers for better margins.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section">
+    <div class="container">
+      <div class="center" style="max-width:640px;">
+        <span class="eyebrow">The Difference</span>
+        <h2 class="h2">AgriHydra vs. Traditional Vendors</h2>
+      </div>
+      <div style="overflow-x:auto;" class="mt-40 reveal">
+        <table class="compare">
+          <tr><th>Capability</th><th class="agh">AgriHydra</th><th>Traditional Vendor</th></tr>
+          <tr><td data-label="Capability">Complete EPC (Design + Build)</td><td class="agh yes" data-label="AgriHydra">✓</td><td class="no" data-label="Traditional Vendor">✗</td></tr>
+          <tr><td data-label="Capability">IoT Farm Monitoring</td><td class="agh yes" data-label="AgriHydra">✓</td><td class="no" data-label="Traditional Vendor">✗</td></tr>
+          <tr><td data-label="Capability">NBFC Financing Support</td><td class="agh yes" data-label="AgriHydra">✓</td><td class="no" data-label="Traditional Vendor">✗</td></tr>
+          <tr><td data-label="Capability">Govt. Subsidy Facilitation</td><td class="agh yes" data-label="AgriHydra">✓</td><td class="no" data-label="Traditional Vendor">Limited</td></tr>
+          <tr><td data-label="Capability">Market Linkage</td><td class="agh yes" data-label="AgriHydra">✓</td><td class="no" data-label="Traditional Vendor">✗</td></tr>
+          <tr><td data-label="Capability">Annual Maintenance Contract</td><td class="agh yes" data-label="AgriHydra">✓</td><td class="no" data-label="Traditional Vendor">Rarely</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2 class="h2" style="color:#fff;position:relative;">Ready to Transform Your Farm?</h2>
+        <p style="color:rgba(255,255,255,.8);max-width:520px;margin:14px auto 0;position:relative;">Talk to our team and get a free farm survey and subsidy eligibility check.</p>
+        <div class="hero-ctas" style="justify-content:center;position:relative;margin-top:28px;">
+          <a class="btn btn-gold" onclick="goPage('roi')">Calculate My ROI</a>
+          <a class="btn btn-ghost-light" onclick="openConsultationModal()">Book Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+
+<!-- ================= PAGE: SERVICES ================= -->
+<div id="page-services" class="page">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Services</span>
+      <h1 class="h2">Products & Services</h1>
+      <p class="lede">Modular offerings that combine into a single turnkey engagement — or stand alone for farmers who already have part of the puzzle solved.</p>
+      <div class="breadcrumb"><b>Home</b> / Services</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid-3">
+      <div class="card reveal feature-card svc-card" onclick="goPage('polyhouse')">
+        <div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1591754060004-f91c95f5cf05?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div>
+        <h4>Turnkey Polyhouse</h4><p class="mt-8">Design, fabrication and installation of NVPH & fan-pad polyhouses engineered for your region's climate.</p>
+        <span class="svc-cta">Explore Polyhouse Services →</span>
+      </div>
+      <div class="card reveal feature-card svc-card" onclick="openServiceModal('Advanced Drip Irrigation')">
+        <div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1738598665806-7ecc32c3594c?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div>
+        <h4>Advanced Drip Irrigation</h4><p class="mt-8">Pressure-compensated drip networks with fertigation-ready headworks, sized to your crop and land.</p>
+        <span class="svc-cta">Register interest →</span>
+      </div>
+      <div class="card reveal feature-card svc-card" onclick="openServiceModal('IoT Dashboard')">
+        <div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div>
+        <h4>IoT Dashboard</h4><p class="mt-8">Real-time soil moisture, temperature, humidity and irrigation-schedule visibility from any device.</p>
+        <span class="svc-cta">Register interest →</span>
+      </div>
+      <div class="card reveal feature-card svc-card" onclick="openServiceModal('Irrigation as a Service')">
+        <div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1604847047676-da9a84adbd08?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div>
+        <h4>Irrigation as a Service</h4><p class="mt-8">No upfront hardware purchase — pay a subscription for managed, monitored irrigation.</p>
+        <span class="svc-cta">Register interest →</span>
+      </div>
+      <div class="card reveal feature-card svc-card" onclick="openServiceModal('Subsidy Facilitation')">
+        <div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div>
+        <h4>Subsidy Facilitation</h4><p class="mt-8">End-to-end documentation, application and liaison for central and state horticulture subsidies.</p>
+        <span class="svc-cta">Register interest →</span>
+      </div>
+      <div class="card reveal feature-card svc-card" onclick="openServiceModal('Marketplace Platform')">
+        <div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1715603803444-d22ea0939876?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;"></div>
+        <h4>Marketplace Platform</h4><p class="mt-8">Direct connections to wholesale buyers and retail chains for better price realization.</p>
+        <span class="svc-cta">Register interest →</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2 class="h2" style="color:#fff;">Not sure which service fits your farm?</h2>
+        <p style="color:rgba(255,255,255,.8);margin-top:12px;">Run the numbers yourself, or talk to our team for a tailored recommendation.</p>
+        <div class="hero-ctas" style="justify-content:center;margin-top:26px;">
+          <a class="btn btn-gold" onclick="goPage('roi')">Try the ROI Calculator</a>
+          <a class="btn btn-ghost-light" onclick="goPage('contact')">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+<!-- ================= PAGE: POLYHOUSE SERVICES ================= -->
+<div id="page-polyhouse" class="page">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Polyhouse Services</span>
+      <h1 class="h2">Turnkey Polyhouse Design, Construction & Automation</h1>
+      <p class="lede">From soil-tested structural design to climate control automation and handover — we engineer polyhouses built for your region, your crop and your budget.</p>
+      <div class="breadcrumb"><b>Home</b> / Services / Polyhouse Services</div>
+    </div>
+  </section>
+
+  <!-- Intro stats -->
+  <section class="section" style="padding-bottom:0;">
+    <div class="container">
+      <div class="stats-band reveal">
+        <div class="grid grid-4">
+          <div class="stat-item"><b class="counter" data-target="1200" data-suffix="+">0</b><span>Acres Under Polyhouse</span></div>
+          <div class="stat-item"><b class="counter" data-target="10" data-suffix="x">0</b><span>Peak Yield Multiplier</span></div>
+          <div class="stat-item"><b class="counter" data-target="60" data-suffix="%">0</b><span>Avg. Govt. Subsidy</span></div>
+          <div class="stat-item"><b class="counter" data-target="8" data-suffix=" wks">0</b><span>Avg. Build Time</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Types of polyhouses -->
+  <section class="section">
+    <div class="container">
+      <div class="center" style="max-width:640px;">
+        <span class="eyebrow">Structures We Build</span>
+        <h2 class="h2">A Polyhouse Type For Every Climate & Budget</h2>
+        <p class="lede center mt-8">Every structure is engineered to local wind, snow and solar-load conditions using galvanized steel and UV-stabilized cladding.</p>
+      </div>
+      <div class="grid grid-3 mt-40">
+        <div class="card reveal feature-card svc-card" onclick="openServiceModal('Naturally Ventilated Polyhouse (NVPH)')">
+          <div class="struct-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1591754060004-f91c95f5cf05?auto=format&fit=crop&w=600&h=400&q=70" alt="Naturally Ventilated (NVPH) polyhouse" loading="lazy">
+            <div class="struct-photo-overlay"><span class="struct-photo-name">Naturally Ventilated (NVPH)</span></div>
+          </div>
+          <h4>Naturally Ventilated (NVPH)</h4>
+          <p class="mt-8">Ridge and side-vent structures that use passive airflow to regulate temperature and humidity — ideal for moderate climates.</p>
+          <span class="svc-cta">Register interest →</span>
+        </div>
+        <div class="card reveal feature-card svc-card" onclick="openServiceModal('Fan & Pad Cooling Polyhouse')">
+          <div class="struct-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1719760665423-c07ba150397b?auto=format&fit=crop&w=600&h=400&q=70" alt="Fan & Pad Cooling polyhouse" loading="lazy">
+            <div class="struct-photo-overlay"><span class="struct-photo-name">Fan & Pad Cooling</span></div>
+          </div>
+          <h4>Fan & Pad Cooling</h4>
+          <p class="mt-8">Active evaporative cooling for hot, dry regions — holds internal temperature 8–12°C below ambient for heat-sensitive crops.</p>
+          <span class="svc-cta">Register interest →</span>
+        </div>
+        <div class="card reveal feature-card svc-card" onclick="openServiceModal('Shade Net House')">
+          <div class="struct-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1727099079513-952d40de9d78?auto=format&fit=crop&w=600&h=400&q=70" alt="Shade Net House" loading="lazy">
+            <div class="struct-photo-overlay"><span class="struct-photo-name">Shade Net House</span></div>
+          </div>
+          <h4>Shade Net House</h4>
+          <p class="mt-8">Lower-cost UV-stabilized net structures for nursery raising, floriculture and shade-loving crops.</p>
+          <span class="svc-cta">Register interest →</span>
+        </div>
+        <div class="card reveal feature-card svc-card" onclick="openServiceModal('Multi-span Polyhouse')">
+          <div class="struct-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1684479924024-3b243f3155e8?auto=format&fit=crop&w=600&h=400&q=70" alt="Multi-span Polyhouse" loading="lazy">
+            <div class="struct-photo-overlay"><span class="struct-photo-name">Multi-span Polyhouse</span></div>
+          </div>
+          <h4>Multi-span Polyhouse</h4>
+          <p class="mt-8">Gutter-connected multi-bay structures that maximize covered growing area per acre for commercial-scale operations.</p>
+          <span class="svc-cta">Register interest →</span>
+        </div>
+        <div class="card reveal feature-card svc-card" onclick="openServiceModal('Walk-in Tunnels')">
+          <div class="struct-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1758524053218-a80cebab26ad?auto=format&fit=crop&w=600&h=400&q=70" alt="Walk-in Tunnels" loading="lazy">
+            <div class="struct-photo-overlay"><span class="struct-photo-name">Walk-in Tunnels</span></div>
+          </div>
+          <h4>Walk-in Tunnels</h4>
+          <p class="mt-8">Low-cost, quick-to-install tunnels for season extension and pilot plots before scaling to a full polyhouse.</p>
+          <span class="svc-cta">Register interest →</span>
+        </div>
+        <div class="card reveal feature-card svc-card" onclick="openServiceModal('Retractable Roof Polyhouse')">
+          <div class="struct-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1761839257946-4616bcfafec7?auto=format&fit=crop&w=600&h=400&q=70" alt="Retractable Roof polyhouse" loading="lazy">
+            <div class="struct-photo-overlay"><span class="struct-photo-name">Retractable Roof</span></div>
+          </div>
+          <h4>Retractable Roof</h4>
+          <p class="mt-8">Motorized roof and side-curtain systems that open fully in favourable weather for hybrid open-field/protected cultivation.</p>
+          <span class="svc-cta">Register interest →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's included -->
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="center" style="max-width:600px;">
+        <span class="eyebrow">What's Included</span>
+        <h2 class="h2">Engineered for Durability & Performance</h2>
+      </div>
+      <div class="grid grid-4 mt-40">
+        <div class="card reveal center">
+          <div class="icon-badge" style="margin:0 auto 14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l9 4.5v9L12 20l-9-4.5v-9L12 2z"/></svg></div>
+          <h4 style="font-size:16px;">Galvanized Steel Frame</h4>
+          <p class="mt-8" style="font-size:14px;">Hot-dip galvanized structures rated for local wind and snow loads, with 15+ year structural life.</p>
+        </div>
+        <div class="card reveal center">
+          <div class="icon-badge" style="margin:0 auto 14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h4 style="font-size:16px;">UV-Stabilized Cladding</h4>
+          <p class="mt-8" style="font-size:14px;">200-micron UV-treated poly film with 3–5 year warranty, optimized for light diffusion.</p>
+        </div>
+        <div class="card reveal center">
+          <div class="icon-badge" style="margin:0 auto 14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
+          <h4 style="font-size:16px;">Climate Automation</h4>
+          <p class="mt-8" style="font-size:14px;">Optional sensor-driven fogging, vent and screen control synced to the AgriHydra IoT dashboard.</p>
+        </div>
+        <div class="card reveal center">
+          <div class="icon-badge" style="margin:0 auto 14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <h4 style="font-size:16px;">Subsidy-Ready Documentation</h4>
+          <p class="mt-8" style="font-size:14px;">Structures and BOQs pre-aligned to central and state horticulture mission specifications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section">
+    <div class="container grid grid-2" style="gap:56px;align-items:start;">
+      <div class="reveal">
+        <span class="eyebrow">Our Process</span>
+        <h2 class="h2">From Site Visit to Harvest-Ready Structure</h2>
+        <p class="lede mt-8">A single point of accountability across survey, design, fabrication, installation and training.</p>
+        <div class="mt-24">
+          <a class="btn btn-primary" onclick="openServiceModal('Polyhouse Services')">Register Interest</a>
+          <a class="btn btn-outline" onclick="goPage('roi')">Estimate ROI</a>
+        </div>
+      </div>
+      <div class="timeline reveal">
+        <div class="timeline-step">
+          <div class="emitter"><div class="dot"></div></div>
+          <div><h4>Site Survey & Soil Testing</h4><p>Our engineers assess wind exposure, water source, soil and terrain to recommend the right structure type.</p></div>
+        </div>
+        <div class="timeline-step">
+          <div class="emitter"><div class="dot"></div></div>
+          <div><h4>Custom Design & Costing</h4><p>Structural drawings, BOQ and subsidy-aligned costing tailored to your land size and crop plan.</p></div>
+        </div>
+        <div class="timeline-step">
+          <div class="emitter"><div class="dot"></div></div>
+          <div><h4>Fabrication & Installation</h4><p>Factory-fabricated components erected on-site by trained crews, typically within 4–8 weeks.</p></div>
+        </div>
+        <div class="timeline-step">
+          <div class="emitter"><div class="dot"></div></div>
+          <div><h4>Climate & Irrigation Integration</h4><p>Fogging, ventilation, drip and optional IoT sensors commissioned and calibrated.</p></div>
+        </div>
+        <div class="timeline-step">
+          <div class="emitter"><div class="dot"></div></div>
+          <div><h4>Handover, Training & AMC</h4><p>Farmer training on operations, plus an optional annual maintenance contract for long-term upkeep.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="center" style="max-width:600px;">
+        <span class="eyebrow">Why Protected Cultivation</span>
+        <h2 class="h2">Polyhouse vs. Shade Net vs. Open Field</h2>
+      </div>
+      <div class="mt-40" style="overflow-x:auto;">
+        <table class="compare">
+          <thead>
+            <tr><th>Factor</th><th>Open Field</th><th>Shade Net</th><th class="agh">AgriHydra Polyhouse</th></tr>
+          </thead>
+          <tbody>
+            <tr><td data-label="Factor">Yield per acre</td><td data-label="Open Field" class="no">Baseline</td><td data-label="Shade Net">1.5–2x</td><td data-label="AgriHydra Polyhouse" class="agh yes">3–10x</td></tr>
+            <tr><td data-label="Factor">Water usage</td><td data-label="Open Field" class="no">High</td><td data-label="Shade Net">Moderate</td><td data-label="AgriHydra Polyhouse" class="agh yes">40% lower</td></tr>
+            <tr><td data-label="Factor">Season extension</td><td data-label="Open Field" class="no">Seasonal only</td><td data-label="Shade Net">Partial</td><td data-label="AgriHydra Polyhouse" class="agh yes">Near year-round</td></tr>
+            <tr><td data-label="Factor">Pest & weather protection</td><td data-label="Open Field" class="no">Minimal</td><td data-label="Shade Net">Partial</td><td data-label="AgriHydra Polyhouse" class="agh yes">High</td></tr>
+            <tr><td data-label="Factor">Govt. subsidy eligible</td><td data-label="Open Field" class="no">✕</td><td data-label="Shade Net">Partial</td><td data-label="AgriHydra Polyhouse" class="agh yes">Up to 60%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="section">
+    <div class="container grid grid-2" style="gap:24px;">
+      <div class="card reveal testimonial-card">
+        <p class="quote">"The team surveyed our land, handled the subsidy paperwork end-to-end, and our fan-pad polyhouse was ready in under two months. Tomato yield tripled the first season."</p>
+        <div class="who"><div class="avatar">RS</div><div><b style="font-family:Poppins;font-size:14.5px;">Ramesh Singh</b><p style="font-size:12.5px;">Polyhouse Farmer, Haryana</p></div></div>
+      </div>
+      <div class="card reveal testimonial-card">
+        <p class="quote">"We chose the NVPH structure on AgriHydra's recommendation and it's held up through two monsoons with zero structural issues. The AMC support has been reliable."</p>
+        <div class="who"><div class="avatar">SP</div><div><b style="font-family:Poppins;font-size:14.5px;">Sunita Patel</b><p style="font-size:12.5px;">Capsicum Grower, Gujarat</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container" style="max-width:820px;">
+      <div class="center"><span class="eyebrow">FAQ</span><h2 class="h2">Polyhouse Questions, Answered</h2></div>
+      <div class="mt-40">
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>Which polyhouse type is right for my region?</span><span class="faq-plus">+</span></div>
+          <div class="faq-a"><p>It depends on your climate, crop and budget — our site survey team recommends NVPH, fan-pad, shade net or a hybrid design after assessing your land and local weather data.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>What is the typical cost per acre?</span><span class="faq-plus">+</span></div>
+          <div class="faq-a"><p>Turnkey costs are illustratively around ₹18,00,000 per acre before subsidy, varying by structure type, cladding grade and automation level. Use our ROI calculator for a personalized estimate.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>Do you handle the subsidy application for polyhouses?</span><span class="faq-plus">+</span></div>
+          <div class="faq-a"><p>Yes — our subsidy desk manages eligibility checks, documentation and liaison with central and state horticulture missions, typically covering up to 60% of project cost.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>What maintenance does a polyhouse need?</span><span class="faq-plus">+</span></div>
+          <div class="faq-a"><p>Routine checks on cladding tension, vent motors, fogging nozzles and structural fasteners. We offer an optional Annual Maintenance Contract to handle this for you.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2 class="h2" style="color:#fff;">Ready to build your polyhouse?</h2>
+        <p style="color:rgba(255,255,255,.8);margin-top:12px;">Book a free farm survey and get a structure recommendation with subsidy-adjusted costing.</p>
+        <div class="hero-ctas" style="justify-content:center;margin-top:26px;">
+          <a class="btn btn-gold" onclick="openServiceModal('Polyhouse Services')">Register Interest</a>
+          <a class="btn btn-ghost-light" onclick="goPage('contact')">Book a Free Survey</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+<!-- ================= PAGE: SOLUTIONS ================= -->
+<div id="page-solutions" class="page">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Solutions</span>
+      <h1 class="h2">Integrated, End-to-End Solutions</h1>
+      <p class="lede">Every layer of protected cultivation, engineered to work together.</p>
+      <div class="breadcrumb"><b>Home</b> / Solutions</div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container grid grid-2" style="gap:24px;">
+      <div class="card reveal feature-card"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1719760665423-c07ba150397b?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;" aria-hidden="true"></div><h4>Polyhouse Construction</h4><p>Structural design and EPC execution using galvanized steel frames and UV-stabilized cladding, built to local wind and climate loads.</p></div>
+      <div class="card reveal feature-card"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1738598665698-7fd7af4b5e0c?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;" aria-hidden="true"></div><h4>Drip Irrigation</h4><p>Zone-wise drip layouts with filtration and pressure regulation, cutting water use by up to 40% versus flood irrigation.</p></div>
+      <div class="card reveal feature-card"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1562722902-d33533894eea?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;" aria-hidden="true"></div><h4>Fertigation Systems</h4><p>Automated nutrient injection synced to growth stage, improving nutrient-use efficiency and reducing labor.</p></div>
+      <div class="card reveal feature-card"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1658753145551-8f44e5811d21?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;" aria-hidden="true"></div><h4>IoT Farm Monitoring</h4><p>Wireless sensor nodes stream soil and climate data to a dashboard with threshold alerts.</p></div>
+      <div class="card reveal feature-card"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1562564055-71e051d33c19?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;" aria-hidden="true"></div><h4>Government Subsidy Assistance</h4><p>Our subsidy desk manages eligibility checks, documentation and disbursal tracking.</p></div>
+      <div class="card reveal feature-card"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1672380135241-c024f7fbfa13?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;" aria-hidden="true"></div><h4>NBFC Financing</h4><p>Structured loan facilitation with partner NBFCs to bridge the net-of-subsidy investment gap.</p></div>
+      <div class="card reveal feature-card"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;" aria-hidden="true"></div><h4>Market Linkage</h4><p>Direct-to-buyer channels for produce grown under AgriHydra systems.</p></div>
+      <div class="card reveal feature-card"><div class="feature-icon" style="width:72px;height:72px;background-image:url('https://images.unsplash.com/photo-1709614584462-8cf8d4384733?auto=format&fit=crop&w=200&h=200&q=70');background-size:cover;background-position:center;" aria-hidden="true"></div><h4>Annual Maintenance</h4><p>Scheduled structural, irrigation and sensor maintenance contracts to protect your investment.</p></div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="center" style="max-width:600px;"><span class="eyebrow">Farmer ROI</span><h2 class="h2">What Farmers Typically See</h2></div>
+      <div class="grid grid-4 mt-40">
+        <div class="card reveal center"><b style="font-family:Poppins;font-size:30px;color:var(--green);">5x</b><p class="mt-8">Yield improvement</p></div>
+        <div class="card reveal center"><b style="font-family:Poppins;font-size:30px;color:var(--green);">40%</b><p class="mt-8">Water saving</p></div>
+        <div class="card reveal center"><b style="font-family:Poppins;font-size:30px;color:var(--green);">&lt;2yr</b><p class="mt-8">Typical payback</p></div>
+        <div class="card reveal center"><b style="font-family:Poppins;font-size:30px;color:var(--green);">↑</b><p class="mt-8">Higher off-season income</p></div>
+      </div>
+      <div class="center mt-40 reveal">
+        <a class="btn btn-primary" onclick="goPage('roi')">Estimate Your Own ROI →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+<!-- ================= PAGE: ROI CALCULATOR ================= -->
+<div id="page-roi" class="page">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">ROI Calculator</span>
+      <h1 class="h2">Estimate Your Return on Investment</h1>
+      <p class="lede">A quick, illustrative estimate based on your land size and crop. Our team will refine this after a free farm survey.</p>
+      <div class="breadcrumb"><b>Home</b> / ROI Calculator</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid-2" style="gap:40px;align-items:start;">
+      <div class="card reveal">
+        <h4>Your Farm Details</h4>
+        <div class="mt-24" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div class="field" style="margin:0;">
+            <label for="roi-land">Land Size (acres)</label>
+            <input type="number" id="roi-land" value="0" min="0" step="0.25" oninput="syncGajFromAcres();calcROI()">
+          </div>
+          <div class="field" style="margin:0;">
+            <label for="roi-land-gaj">Land Size (Gaj)</label>
+            <input type="number" id="roi-land-gaj" min="0" step="1" oninput="syncAcresFromGaj();calcROI()">
+          </div>
+        </div>
+        <p style="font-size:11.5px;margin-top:6px;color:var(--ink-muted);">1 acre ≈ 4,840 gaj. Edit either field — the other updates automatically.</p>
+        <div class="field">
+          <label for="roi-crop">Primary Crop</label>
+          <input type="text" id="roi-crop" list="roi-crop-list" value="Tomato" placeholder="Type or pick a crop, e.g. Tomato, Strawberry..." oninput="calcROI()">
+          <datalist id="roi-crop-list">
+            <option value="Tomato">
+            <option value="Capsicum">
+            <option value="Cucumber">
+            <option value="Leafy Greens">
+            <option value="Brinjal">
+            <option value="Cauliflower">
+            <option value="Cabbage">
+            <option value="Strawberry">
+            <option value="Green Chilli">
+            <option value="Watermelon">
+            <option value="Muskmelon">
+            <option value="Okra">
+          </datalist>
+          <p style="font-size:11.5px;margin-top:6px;color:var(--ink-muted);">Don't see your crop? Just type it in — we'll use an illustrative estimate and refine it during your farm survey.</p>
+        </div>
+        <div class="field">
+          <label for="roi-method">Current Cultivation Method</label>
+          <select id="roi-method" onchange="calcROI()">
+            <option value="1">Open Field</option>
+            <option value="0.85">Basic Drip (no polyhouse)</option>
+            <option value="0.65">Polyhouse (existing, upgrading)</option>
+          </select>
+        </div>
+        <p style="font-size:12.5px;margin-top:6px;">Estimates use an illustrative turnkey cost of ₹18,00,000/acre and 60% subsidy. Actual figures depend on site survey, state and crop.</p>
+      </div>
+
+      <div class="card reveal" style="background:var(--green-dark);color:#fff;">
+        <h4 style="color:#fff;">Your Estimated Outcome</h4>
+        <div class="grid grid-2 mt-24" style="gap:16px;">
+          <div><span style="font-size:12.5px;color:rgba(255,255,255,.7);">Est. Yield Increase</span><b id="out-yield" style="display:block;font-family:Poppins;font-size:26px;color:var(--gold);">+0%</b></div>
+          <div><span style="font-size:12.5px;color:rgba(255,255,255,.7);">Water Saved / Year</span><b id="out-water" style="display:block;font-family:Poppins;font-size:26px;color:var(--gold);">0.0 L (lakh)</b></div>
+          <div><span style="font-size:12.5px;color:rgba(255,255,255,.7);">Total Investment</span><b id="out-invest" style="display:block;font-family:Poppins;font-size:22px;">₹0</b></div>
+          <div><span style="font-size:12.5px;color:rgba(255,255,255,.7);">Subsidy (60%)</span><b id="out-subsidy" style="display:block;font-family:Poppins;font-size:22px;">₹0</b></div>
+          <div><span style="font-size:12.5px;color:rgba(255,255,255,.7);">Your Net Investment</span><b id="out-net" style="display:block;font-family:Poppins;font-size:22px;">₹0</b></div>
+          <div><span style="font-size:12.5px;color:rgba(255,255,255,.7);">Estimated Payback</span><b id="out-payback" style="display:block;font-family:Poppins;font-size:22px;">0.0 yrs</b></div>
+        </div>
+        <a class="btn btn-gold mt-24" style="width:100%;" onclick="goPage('contact')">Book</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+<!-- ================= PAGE: GOVERNMENT SCHEMES ================= -->
+<div id="page-schemes" class="page">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Government Support</span>
+      <h1 class="h2">Government Schemes & Subsidies for Polyhouse & Irrigation</h1>
+      <p class="lede">Central and state governments fund up to 60–75% of protected-cultivation and micro-irrigation project cost. Here's what's available, who qualifies, and exactly where to apply — our subsidy desk can also handle it for you end-to-end.</p>
+      <div class="breadcrumb"><b>Home</b> / Government Schemes</div>
+    </div>
+  </section>
+
+  <!-- Intro stats -->
+  <section class="section" style="padding-bottom:0;">
+    <div class="container">
+      <div class="stats-band reveal">
+        <div class="grid grid-4">
+          <div class="stat-item"><b class="counter" data-target="75" data-suffix="%">0</b><span>Max. Subsidy (NE & Hilly States)</span></div>
+          <div class="stat-item"><b class="counter" data-target="60" data-suffix="%">0</b><span>Typical Subsidy (General States)</span></div>
+          <div class="stat-item"><b class="counter" data-target="3" data-suffix="">0</b><span>Major Scheme Routes</span></div>
+          <div class="stat-item"><b class="counter" data-target="5" data-suffix="">0</b><span>Documents Usually Needed</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEMES -->
+  <section class="section">
+    <div class="container">
+      <div class="center" style="max-width:640px;">
+        <span class="eyebrow">Key Schemes</span>
+        <h2 class="h2">Schemes You Can Apply Under</h2>
+        <p class="lede center">Tap any scheme to see its benefits, coverage and a short explanation. Our subsidy desk can check your exact eligibility for free.</p>
+      </div>
+      <div class="grid grid-3 mt-40">
+        <div class="card reveal feature-card scheme-card" onclick="openSchemeModal('pmksy')">
+          <span class="scheme-badge">Central Scheme</span>
+          <h4>PMKSY – Per Drop More Crop (PDMC)</h4>
+          <p class="mt-8">Pradhan Mantri Krishi Sinchayee Yojana's micro-irrigation component — subsidises drip & sprinkler systems to improve water-use efficiency on your farm.</p>
+          <div class="scheme-meta">
+            <div><b>Up to 55%</b>Subsidy (Small/Marginal)</div>
+            <div><b>Drip & Sprinkler</b>Coverage</div>
+          </div>
+          <span class="svc-cta">View Benefits & Details →</span>
+        </div>
+        <div class="card reveal feature-card scheme-card" onclick="openSchemeModal('midh')">
+          <span class="scheme-badge">Central Scheme</span>
+          <h4>MIDH – Polyhouse / Protected Cultivation</h4>
+          <p class="mt-8">Mission for Integrated Development of Horticulture funds greenhouses, shade-net houses and plastic-mulching under its Protected Cultivation component.</p>
+          <div class="scheme-meta">
+            <div><b>Up to 50%</b>Subsidy (Structure Cost)</div>
+            <div><b>Polyhouse</b>&amp; Shade-net</div>
+          </div>
+          <span class="svc-cta">View Benefits & Details →</span>
+        </div>
+        <div class="card reveal feature-card scheme-card" onclick="openSchemeModal('state')">
+          <span class="scheme-badge">State Scheme</span>
+          <h4>State Horticulture Mission Schemes</h4>
+          <p class="mt-8">Most states top up central assistance with their own horticulture mission schemes, sometimes taking total farmer subsidy well beyond the central share.</p>
+          <div class="scheme-meta">
+            <div><b>Varies</b>By State</div>
+            <div><b>Top-up</b>On Central Share</div>
+          </div>
+          <span class="svc-cta">View Benefits & Details →</span>
+        </div>
+      </div>
+      <p class="center mt-24" style="font-size:12.5px;color:var(--ink-muted);">Subsidy percentages, ceilings and norms are revised periodically by the government. Figures above are illustrative — always confirm current rates with your District Horticulture Office or our subsidy desk before applying.</p>
+    </div>
+  </section>
+
+  <!-- WHO CAN APPLY -->
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="center" style="max-width:640px;">
+        <span class="eyebrow">Eligibility</span>
+        <h2 class="h2">Who Can Apply</h2>
+        <p class="lede center">These schemes are open to a wide range of applicants, not just individual landowners.</p>
+      </div>
+      <div class="eligibility-grid mt-40">
+        <div class="elig-item reveal">
+          <div class="elig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0114 0v1"/></svg></div>
+          <div><h5>Individual Farmers</h5><p>Landowning & tenant/lease-holding farmers with valid land records.</p></div>
+        </div>
+        <div class="elig-item reveal">
+          <div class="elig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div><h5>FPOs</h5><p>Farmer Producer Organisations registered under Companies Act or Co-operative Societies Act.</p></div>
+        </div>
+        <div class="elig-item reveal">
+          <div class="elig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div><h5>SHGs</h5><p>Registered Self-Help Groups engaged in agriculture or allied horticultural activity.</p></div>
+        </div>
+        <div class="elig-item reveal">
+          <div class="elig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M9 21V9M3 9l9-6 9 6"/></svg></div>
+          <div><h5>Registered Societies / Cooperatives</h5><p>Cooperative societies and registered trusts undertaking horticulture or irrigation projects.</p></div>
+        </div>
+        <div class="elig-item reveal">
+          <div class="elig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12l5.5-9h9L22 12l-5.5 9h-9L2 12z"/><path d="M12 8v4l3 2"/></svg></div>
+          <div><h5>Agriculture Entrepreneurs</h5><p>Private individuals or firms setting up commercial protected-cultivation or agri-infrastructure ventures.</p></div>
+        </div>
+        <div class="elig-item reveal">
+          <div class="elig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11.8A8 8 0 0012 2a8 8 0 00-8 8.2C4 17.5 12 22 12 22z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h5>Horticulture Growers</h5><p>Growers of fruits, vegetables, spices, flowers or plantation crops expanding under protected cultivation.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE TO APPLY -->
+  <section class="section">
+    <div class="container">
+      <div class="center" style="max-width:640px;">
+        <span class="eyebrow">Application Channels</span>
+        <h2 class="h2">Where to Apply</h2>
+        <p class="lede center">You can apply directly through any of these official government channels — or let our subsidy desk manage it for you.</p>
+      </div>
+      <div class="apply-grid mt-40">
+        <div class="apply-card reveal">
+          <div class="apply-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+          <h5>District Agriculture Office</h5>
+          <p>Your first point of contact for scheme information, application forms and field-level verification in your district.</p>
+          <a class="apply-link" href="https://agriwelfare.gov.in" target="_blank" rel="noopener">agriwelfare.gov.in ↗</a>
+        </div>
+        <div class="apply-card reveal">
+          <div class="apply-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11.8A8 8 0 0012 2a8 8 0 00-8 8.2C4 17.5 12 22 12 22z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h5>District Horticulture Office</h5>
+          <p>Handles MIDH, polyhouse and horticulture-specific subsidy applications, site inspection and disbursal tracking.</p>
+          <a class="apply-link" href="https://midh.gov.in" target="_blank" rel="noopener">midh.gov.in ↗</a>
+        </div>
+        <div class="apply-card reveal">
+          <div class="apply-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <h5>State Departmental Portal</h5>
+          <p>Each state runs its own horticulture/agriculture department portal for scheme-wise online applications and status tracking.</p>
+          <a class="apply-link" href="https://www.india.gov.in/website-state-horticulture-departments" target="_blank" rel="noopener">Find your state portal ↗</a>
+        </div>
+        <div class="apply-card reveal">
+          <div class="apply-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4M2 11h20"/></svg></div>
+          <h5>Common Service Centres (CSC)</h5>
+          <p>Village-level digital-service kiosks that can help you fill and submit scheme applications online, including document upload.</p>
+          <a class="apply-link" href="https://csc.gov.in" target="_blank" rel="noopener">csc.gov.in ↗</a>
+        </div>
+        <div class="apply-card reveal">
+          <div class="apply-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h5>Micro Irrigation Online Portal (PMKSY-PDMC)</h5>
+          <p>The dedicated national portal for drip & sprinkler irrigation subsidy applications and guidelines under PMKSY.</p>
+          <a class="apply-link" href="https://pmksy.gov.in/microirrigation/" target="_blank" rel="noopener">pmksy.gov.in/microirrigation ↗</a>
+        </div>
+        <div class="apply-card reveal">
+          <div class="apply-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
+          <h5>Let AgriHydra Apply For You</h5>
+          <p>Skip the paperwork — our subsidy desk handles eligibility checks, documentation and liaison on your behalf, start to finish.</p>
+          <a class="apply-link" onclick="openServiceModal('Subsidy Facilitation')" style="cursor:pointer;">Register Interest →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO APPLY / DOCUMENTS -->
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container">
+      <div class="center" style="max-width:640px;">
+        <span class="eyebrow">Get Ready</span>
+        <h2 class="h2">Guideline: How to Apply</h2>
+        <p class="lede center">Keep these five documents ready before you start any application — most delays happen simply from missing paperwork.</p>
+      </div>
+      <div class="doc-checklist mt-40">
+        <div class="doc-step reveal">
+          <div class="doc-num">1</div>
+          <div class="doc-ic">🪪</div>
+          <h5>Aadhaar Card</h5>
+          <p>For applicant identity verification and DBT-linked subsidy transfer.</p>
+        </div>
+        <div class="doc-step reveal">
+          <div class="doc-num">2</div>
+          <div class="doc-ic">📜</div>
+          <h5>Land Records (Khatauni)</h5>
+          <p>Khatauni / khasra / 7-12 extract proving ownership or valid lease of the land.</p>
+        </div>
+        <div class="doc-step reveal">
+          <div class="doc-num">3</div>
+          <div class="doc-ic">🏦</div>
+          <h5>Bank Passbook</h5>
+          <p>Aadhaar-linked bank passbook copy for direct benefit transfer (DBT) of subsidy.</p>
+        </div>
+        <div class="doc-step reveal">
+          <div class="doc-num">4</div>
+          <div class="doc-ic">📷</div>
+          <h5>Passport-size Photo</h5>
+          <p>Recent passport-size photograph of the applicant for the scheme application form.</p>
+        </div>
+        <div class="doc-step reveal">
+          <div class="doc-num">5</div>
+          <div class="doc-ic">📱</div>
+          <h5>Mobile Number</h5>
+          <p>Active, Aadhaar-linked mobile number for OTP verification and application status updates.</p>
+        </div>
+      </div>
+      <div class="center mt-40 reveal">
+        <a class="btn btn-primary" onclick="openConsultationModal()">Get Help With Your Application →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2 class="h2" style="color:#fff;">Not sure which scheme you qualify for?</h2>
+        <p style="color:rgba(255,255,255,.8);margin-top:12px;">Our subsidy desk runs a free eligibility check against every applicable central and state scheme for your land.</p>
+        <div class="hero-ctas" style="justify-content:center;margin-top:26px;">
+          <a class="btn btn-gold" onclick="openServiceModal('Subsidy Facilitation')">Check My Eligibility</a>
+          <a class="btn btn-ghost-light" onclick="goPage('contact')">Talk to Our Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+<!-- ================= PAGE: CONTACT ================= -->
+<div id="page-contact" class="page">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Contact</span>
+      <h1 class="h2">Let's Talk About Your Farm</h1>
+      <p class="lede">Reach out for a free consultation and farm survey.</p>
+      <div class="breadcrumb"><b>Home</b> / Contact</div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container grid grid-2" style="gap:44px;align-items:start;">
+      <div class="card reveal">
+        <h4>Farmer Registration</h4>
+        <p class="mt-8" style="font-size:14px;">Register your interest and our team will call you within 24 hours. AgriHydra brings together, under one roof:</p>
+        <ul class="mt-16" style="font-size:14px;line-height:1.9;padding-left:20px;">
+          <li>Turnkey polyhouse & drip irrigation with fertigation</li>
+          <li>Subsidy & NBFC financing assistance</li>
+          <li>Agronomy advisory and IoT farm monitoring</li>
+          <li>Market linkage for your harvest</li>
+        </ul>
+        <a class="btn btn-primary mt-24" style="width:100%;" href="https://forms.gle/RFDNdFHRuziS9F1PA" target="_blank" rel="noopener noreferrer">Register as a Farmer</a>
+      </div>
+      <div class="reveal">
+        <div class="card">
+          <h4>Contact Information</h4>
+          <div class="mt-24" style="display:flex;flex-direction:column;gap:16px;font-size:14.5px;">
+            <div><b style="font-family:Poppins;">Phone</b><p>96505 60277 · 99101 96123</p></div>
+            <div><b style="font-family:Poppins;">Email</b><p>globalexpressgroup@gmail.com</p></div>
+            <div><b style="font-family:Poppins;">Office</b><p>13, Institutional Area, Lodhi Road, New Delhi 110 003</p></div>
+          </div>
+        </div>
+        <div class="card mt-24" style="padding:0;overflow:hidden;">
+          <iframe title="Office location map" width="100%" height="240" style="border:0;display:block;" loading="lazy"
+            src="https://maps.google.com/maps?q=13%20Institutional%20Area%2C%20Lodhi%20Road%2C%20New%20Delhi%20110003&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--gray-50);">
+    <div class="container" style="max-width:820px;">
+      <div class="center"><span class="eyebrow">FAQ</span><h2 class="h2">Common Questions</h2></div>
+      <div class="mt-40" id="faq-list">
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>How much subsidy can I get on a polyhouse?</span><span class="faq-plus">+</span></div>
+          <div class="faq-a"><p>Subsidy percentages vary by state and scheme, typically up to 60% of project cost under central and state horticulture missions. Our subsidy desk checks your exact eligibility.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>How long does installation take?</span><span class="faq-plus">+</span></div>
+          <div class="faq-a"><p>Most polyhouse and drip irrigation installations are completed within 4–8 weeks of survey approval, depending on size and site conditions.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>Do you offer financing if I can't pay upfront?</span><span class="faq-plus">+</span></div>
+          <div class="faq-a"><p>Yes — we facilitate structured loans through partner NBFCs to cover the net-of-subsidy investment.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>Is IoT monitoring included by default?</span><span class="faq-plus">+</span></div>
+          <div class="faq-a"><p>IoT monitoring is available as an add-on to any polyhouse or drip project, and included by default in our Irrigation-as-a-Service plans.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ================= PAGE: PARTNER WITH US ================= -->
+<div id="page-partner" class="page">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Partnerships</span>
+      <h1 class="h2">Partner With AgriHydra</h1>
+      <p class="lede">Grow with us — for Farmer Producer Companies, dealers, distributors, retailers and exporters.</p>
+      <div class="breadcrumb"><b>Home</b> / Partner With Us</div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container grid grid-2" style="gap:44px;align-items:start;">
+      <div class="reveal">
+        <span class="eyebrow">Why Partner With Us</span>
+        <h2 class="h2">Grow Reach, Together</h2>
+        <p class="lede mt-16">AgriHydra works with strategic partners across the agriculture value chain to bring protected cultivation and precision irrigation to more Indian farmers.</p>
+        <div class="grid mt-24" style="gap:16px;">
+          <div class="card feature-card">
+            <h4>Farmer Producer Companies (FPCs)</h4>
+            <p>Community-based adoption of polyhouse and drip irrigation solutions among your member farmers.</p>
+          </div>
+          <div class="card feature-card">
+            <h4>Dealers & Distributors</h4>
+            <p>Join our distributor network for hardware sales and widespread market penetration.</p>
+          </div>
+          <div class="card feature-card">
+            <h4>Retailers & Exporters</h4>
+            <p>Direct market linkage and off-take partnerships for premium, off-season produce.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card reveal">
+        <h4>Partner Registration</h4>
+        <p class="mt-8" style="font-size:14px;">Tell us about your organisation and how you'd like to work with AgriHydra — our partnerships team will get in touch.</p>
+        <a class="btn btn-primary mt-24" style="width:100%;" href="https://forms.gle/PvDu8Eii9a4eVVqC7" target="_blank" rel="noopener noreferrer">Partner With Us</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="color:#fff;"><img class="mark" src="image/logo.jpeg" alt="AgriHydra Solutions logo" style="border-radius:12px;object-fit:contain;background:#fff;padding:2px;"></div>
+        <p style="margin-top:14px;font-size:14px;max-width:280px;">India's integrated polyhouse and precision-irrigation partner — helping farmers grow more with less water.</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a onclick="goPage('home')">Home</a></li>
+          <li><a onclick="goPage('solutions')">Solutions</a></li>
+          <li><a onclick="goPage('contact')">Contact</a></li>
+          <li><a onclick="goPage('partner')">Partner With Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a onclick="goPage('polyhouse')">Polyhouse Services</a></li>
+          <li><a onclick="goPage('services')">Drip Irrigation</a></li>
+          <li><a onclick="goPage('services')">IoT Monitoring</a></li>
+          <li><a onclick="goPage('services')">Subsidy Facilitation</a></li>
+          <li><a onclick="goPage('roi')">ROI Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Stay Updated</h5>
+        <p style="font-size:14px;">Get farming tips, subsidy updates and project stories in your inbox.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault();this.reset();alert('Thanks for subscribing!');">
+          <input type="email" placeholder="Your email" required>
+          <button class="btn btn-primary btn-sm" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AgriHydra Solutions. All rights reserved.</span>
+      <span>13, Institutional Area, Lodhi Road, New Delhi 110 003 · globalexpressgroup@gmail.com · Privacy Policy</span>
+    </div>
+  </div>
+</footer>
+
+<!-- floating buttons -->
+<a id="whatsapp-fab" class="fab" href="https://wa.me/919650560277" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-1.4-.7-2.3-1.3-3.3-2.9-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5s-.6-1.5-.8-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+<button id="totop-fab" class="fab" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<!-- ================= SCHEME DETAILS MODAL ================= -->
+<div class="svc-modal-overlay" id="scheme-modal-overlay" onclick="if(event.target===this) closeSchemeModal()">
+  <div class="svc-modal" role="dialog" aria-modal="true" aria-labelledby="scheme-modal-title">
+    <button type="button" class="svc-modal-close" onclick="closeSchemeModal()" aria-label="Close">✕</button>
+    <span class="eyebrow" id="scheme-modal-badge">Central Scheme</span>
+    <h3 id="scheme-modal-title" style="font-family:Poppins;font-size:21px;">Scheme Name</h3>
+    <p class="mt-8" style="font-size:14px;color:var(--ink-muted);" id="scheme-modal-desc">Description goes here.</p>
+    <div class="scheme-modal-meta" id="scheme-modal-meta"></div>
+    <h4 class="mt-24" style="font-size:14.5px;">Key Benefits</h4>
+    <ul class="scheme-modal-benefits" id="scheme-modal-benefits"></ul>
+    <a class="scheme-modal-official" id="scheme-modal-link" href="#" target="_blank" rel="noopener">Visit Official Scheme Website ↗</a>
+    <a class="btn btn-primary mt-16" style="width:100%;" onclick="closeSchemeModal();openServiceModal('Subsidy Facilitation')">Get Help Applying →</a>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
