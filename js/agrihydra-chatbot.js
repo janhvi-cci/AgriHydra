@@ -288,7 +288,7 @@
     const hasStorage = localStorage.getItem(HISTORY_KEY);
     const savedOpen = localStorage.getItem(OPEN_KEY) === 'true';
     state.messages = loadMessages();
-    state.open = hasStorage ? savedOpen : true;
+    state.open = hasStorage ? savedOpen : false;
 
     buildPanel();
     bindEvents();
